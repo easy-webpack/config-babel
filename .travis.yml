@@ -14,3 +14,6 @@ before_script:
 - npm install @easy-webpack/core webpack@beta
 after_success:
 - npm run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
