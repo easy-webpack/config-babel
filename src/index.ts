@@ -5,7 +5,7 @@ import * as path from 'path'
  * Babel loader support for ES2015
  * See: https://github.com/babel/babel-loader
  */
-export function babel(options = {
+export = function babel(options = {
     plugins: ['transform-decorators-legacy'],
     presets: ['es2015-loose-native-modules', 'stage-1'],
     cacheDirectory: true,
