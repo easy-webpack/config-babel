@@ -9,7 +9,7 @@ export = function babel({ options = {
     plugins: ['transform-decorators-legacy'],
     presets: ['es2015-loose-native-modules', 'stage-1'],
     cacheDirectory: true,
-  }, exclude = null }) {
+  }, exclude = null } = {}) {
   return function babel(this: WebpackConfig): WebpackConfig {
     return {
       module: {
