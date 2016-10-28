@@ -7,7 +7,7 @@ import * as path from 'path'
  */
 export = function babel({ options = {
     plugins: ['transform-decorators-legacy'],
-    presets: ['es2015-loose-native-modules', 'stage-1'],
+    presets: [['es2015', {loose: true, modules: false}], 'stage-1'],
     cacheDirectory: true,
   }, exclude = null } = {}) {
   return function babel(this: WebpackConfig): WebpackConfig {
