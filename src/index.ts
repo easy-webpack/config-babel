@@ -1,4 +1,4 @@
-import {WebpackConfig, get} from '@easy-webpack/core'
+import {WebpackConfigWithMetadata, get} from '@easy-webpack/core'
 import * as path from 'path'
 
 /**
@@ -10,7 +10,7 @@ export = function babel({ options = {
     presets: [['es2015', {loose: true, modules: false}], 'stage-1'],
     cacheDirectory: true,
   }, exclude = null } = {}) {
-  return function babel(this: WebpackConfig): WebpackConfig {
+  return function babel(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
     return {
       module: {
         loaders: get(this, 'module.loaders', []).concat([{
