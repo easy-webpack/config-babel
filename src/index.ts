@@ -13,7 +13,7 @@ export = function babel({ options = {
   return function babel(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
     return {
       module: {
-        loaders: get(this, 'module.loaders', []).concat([{
+        rules: get(this, 'module.rules', []).concat([{
           test: /\.jsx?$/,
           loader: 'babel',
           exclude: exclude || (this.metadata.root ? [path.join(this.metadata.root, 'node_modules')] : []),
