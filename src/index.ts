@@ -15,7 +15,7 @@ export = function babel({ options = {
       module: {
         rules: get(this, 'module.rules', []).concat([{
           test: /\.jsx?$/,
-          loader: 'babel',
+          loader: 'babel-loader',
           exclude: exclude || (this.metadata.root ? [path.join(this.metadata.root, 'node_modules')] : []),
           query: options
         }])
