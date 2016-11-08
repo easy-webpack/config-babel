@@ -2,12 +2,29 @@ import {WebpackConfigWithMetadata, get} from '@easy-webpack/core'
 import * as path from 'path'
 
 /**
- * Babel loader support for ES2015
+ * Babel loader support
  * See: https://github.com/babel/babel-loader
  */
 export = function babel({ options = {
-    plugins: ['transform-decorators-legacy'],
-    presets: [['es2015', {loose: true, modules: false}], 'stage-1'],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-class-properties"
+    ],
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions",
+              "not ie <= 11"
+            ]
+          },
+          "loose": true,
+          "modules": false
+        }
+      ]
+    ],
     cacheDirectory: true,
   }, exclude = null } = {}) {
   return function babel(this: WebpackConfigWithMetadata): WebpackConfigWithMetadata {
