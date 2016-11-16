@@ -47,7 +47,7 @@
     "babel-loader": "^6.2.7"
   },
   "peerDependencies": {
-    "@easy-webpack/core": "*"
+    "@easy-webpack/core": "2.0.1"
   },
   "ava": {
     "files": [
