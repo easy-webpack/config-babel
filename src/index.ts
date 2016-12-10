@@ -21,7 +21,10 @@ export = function babel({ options = {
             ]
           },
           "loose": true,
-          "modules": false
+          "modules": false,
+          "whitelist": [
+            "transform-es2015-literals" // required for uglify
+          ],
         }
       ]
     ],
