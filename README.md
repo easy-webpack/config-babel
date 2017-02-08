@@ -1,4 +1,6 @@
 # @easy-webpack/config-babel
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/easy-webpack/config-babel.svg)](https://greenkeeper.io/)
 Transform next generation JavaScript using [babel] and [babel-loader].
 
 Transform on `.jsx` file is also supported by default.
